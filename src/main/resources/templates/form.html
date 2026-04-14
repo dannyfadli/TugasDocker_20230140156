@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eeeeee;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        /* 🔥 khusus input text */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* 🔥 radio biar normal */
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .radio-group {
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Form Input Mahasiswa</h3>
+
+    <form action="/submit" method="post">
+        <label>Nama:</label>
+        <input type="text" name="nama" required>
+
+        <label>NIM:</label>
+        <input type="text" name="nim" required>
+
+        <label>Jenis Kelamin:</label>
+
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="jk" value="Laki-laki" required>
+                Laki-laki
+            </label><br>
+
+            <label>
+                <input type="radio" name="jk" value="Perempuan">
+                Perempuan
+            </label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <a href="/home">← Kembali ke Home</a>
+</div>
+
+</body>
+</html>
